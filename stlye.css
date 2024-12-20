@@ -1,0 +1,76 @@
+/** @format */
+
+h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(to top, red 0%, yellow 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin-top: 20px auto;
+}
+
+body {
+	background-color: #f1f1f1;
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	background-color: #4caf50;
+	border: none;
+	color: white;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 30px;
+	margin: 4px 2px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+ #rock {
+	background-color: red;
+}
+ #paper {
+	background-color: blue;
+}
+
+#user-score {
+	color: blue;
+}
+
+#computer-score {
+	color: red;
+}
+
+@media screen and (max-width: 600px) {
+	 h1 {
+		font-size: 30px;
+	}
+	
+}
