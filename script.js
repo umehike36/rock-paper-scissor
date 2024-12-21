@@ -1,10 +1,28 @@
 const buttons = document.querySelectorAll("button")
+const demoEl = document.querySelector("#demo")
 const resultEL = document.querySelector("#result")
 const playerScoreEl = document.querySelector("#user-score")
 const computerScoreEl= document.querySelector("#computer-score")
-
+const restartEl = document.getElementById("restartEl")
+console.log(restartEl)
 let playerScore = 0;
 let computerScore = 0;
+
+
+
+restartEl.addEventListener("click", () => {
+	console.log("clicked")
+	playerScore = 0;
+	computerScore = 0;
+	playerScoreEl.textContent = playerScore;
+	computerScoreEl.textContent = computerScore;
+	demoEl.innerHTML = "";
+	resultEL.innerHTML = "";
+})
+
+
+
+
 
 buttons.forEach((button) => {
 	button.addEventListener("click", () => {
@@ -37,6 +55,7 @@ function playRound(playerSeletion, computerSelection) {
 		result = "You lose!";
 		computerScoreEl.textContent = computerScore;
 	}
+	demoEl.innerHTML = result;
 	resultEL.innerHTML = `You chose ${playerSeletion} and the computer chose ${computerSelection}`;
 	console.log(result);
 	return result;
